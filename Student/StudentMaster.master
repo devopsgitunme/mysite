@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StudentMaster.master.cs" Inherits="StudentMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="../StyleSheet.css"rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            height: 64px;
+        }
+        .style3
+        {
+            height: 349px;
+        }
+        .style4
+        {
+            height: 64px;
+            background-color: #D33E2C;
+            width: 933px;
+        }
+    </style>
+</head>
+<body background="../Images/Textures.jpg">
+    <form id="form1" runat="server">
+    <div>
+       
+        <table class="style1">
+            <tr>
+                <td class="style4">
+                    <asp:Menu ID="Menu1" runat="server" Font-Bold="False" Font-Italic="False" 
+                        Font-Size="18pt" Height="100px" Orientation="Horizontal" Width="960px" 
+                        BorderStyle="Ridge" ForeColor="#FFFF66">
+                        <DynamicHoverStyle BorderColor="#336699" 
+                            BorderStyle="None" Font-Bold="False" Font-Italic="True" Font-Size="Larger" 
+                            ForeColor="#CC9900" />
+                        <DynamicMenuStyle BackColor="#D33E2C" />
+                        <DynamicMenuItemStyle BackColor="#D33E2C" ForeColor="#B5BECE" 
+                            Font-Italic="False" Font-Size="14pt" Height="25px" Width="150px" />
+                        <StaticHoverStyle BorderColor="#FFFF66" BorderStyle="Ridge" />
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="Education" Value="Education">
+                                <asp:MenuItem Text="E-Books" Value="E-Books"></asp:MenuItem>
+                                <asp:MenuItem Text="How to get Good Marks" Value="How to get Good Marks">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Important Units" Value="Important Units"></asp:MenuItem>
+                                <asp:MenuItem Text="Materials" Value="Materials" 
+                                    NavigateUrl="~/Student/StudentAllSubjects.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Online Bits" Value="Online Bits"></asp:MenuItem>
+                                <asp:MenuItem Text="Previous Question Papers" Value="Previous Question Papers">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Technical Speaces" Value="Technical Speaces">
+                                <asp:MenuItem Text="Academic PPt's" Value="Academic PPt's"></asp:MenuItem>
+                                <asp:MenuItem Text="Comprahensive Viva" Value="Comprahensive Viva">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Main Project Documentation" 
+                                    Value="Main Project Documentation"></asp:MenuItem>
+                                <asp:MenuItem Text="Mini Project Documentation" 
+                                    Value="Mini Project Documentation"></asp:MenuItem>
+                                <asp:MenuItem Text="Technical ppt&quot;s" Value="Technical ppt&quot;s">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Results Phonia" Value="Results Phonia"></asp:MenuItem>
+                            <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+&nbsp;
+                </td>
+                <td class="style2" bgcolor="#D33E2C">
+                    &nbsp;<asp:Image ID="Image1" runat="server" Height="75px" Width="75px" 
+                        style="margin-left: 1px" />
+                    &nbsp;&nbsp;&nbsp;<asp:LinkButton ID="lbProfName" runat="server" Font-Underline="False" 
+                        ForeColor="Yellow" style="font-size: x-large" CausesValidation="False" 
+                        onclick="lbProfName_Click"></asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td class="style3" colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+       
+    </div>
+    </form>
+</body>
+</html>

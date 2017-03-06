@@ -1,0 +1,9 @@
+﻿body {
+}
+a:hover
+{
+	font-style:oblique;
+	border-bottom-width:thin;
+	border-bottom-style:ridge;
+	border-bottom-color:#004F4F;
+}

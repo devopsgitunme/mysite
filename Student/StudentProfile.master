@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Student/StudentMaster.master" AutoEventWireup="false" CodeFile="StudentProfile.master.cs" Inherits="Student_StudentProfile" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .style5
+        {
+            width: 177px;
+        }
+        .style6
+        {
+            width: 687px;
+        }
+        .style7
+        {
+            height: 307px;
+        }
+        .style8
+        {
+            height: 33px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table class="style1">
+        <tr>
+            <td class="style5">
+                <table class="style1" style="width: 91%">
+                    <tr>
+                        <td>
+                            <asp:Image ID="imgProfilePic" runat="server" Height="185px" Width="150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:LinkButton ID="LinkButton1" runat="server" Font-Underline="False" 
+                                onclick="LinkButton1_Click">GetImage</asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:HyperLink ID="HyperLink4" runat="server" Font-Underline="False" 
+                                ForeColor="#C14A3B" NavigateUrl="~/Student/ChangePhoto.aspx">Change Photo</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:LinkButton ID="LinkButton2" runat="server" Font-Underline="False" 
+                                ForeColor="#C14A3B" onclick="LinkButton2_Click">Remove Photo</asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="False" 
+                                ForeColor="#C14A3B" NavigateUrl="~/Student/BasicEdit.aspx">Basic</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="#C14A3B" 
+                                Font-Underline="False" NavigateUrl="~/Student/Editstatus.aspx">Working Status</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="#C14A3B" 
+                                NavigateUrl="~/Student/EditContactInfo.aspx" Font-Underline="False">Contact</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="style6">
+                <table class="style1" style="height: 296px">
+                    <tr>
+                        <td class="style8">
+                            <asp:Label ID="lblUname" runat="server" Font-Size="Larger"></asp:Label>
+                            &nbsp;&nbsp;&gt;
+                            <asp:Label ID="Label2" runat="server" Font-Size="Larger" Text="Edit Profile"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="Button1" runat="server" BackColor="White" Height="35px" 
+                                onclick="Button1_Click" Text="&lt;&lt;View Profile" Width="100px" />
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style7">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+</asp:Content>
+
